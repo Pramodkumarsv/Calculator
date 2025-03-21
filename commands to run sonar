@@ -1,0 +1,4 @@
+sudo apt install maven
+sudo apt install openjdk-17-jdk -y
+mvn clean compile
+mvn sonar:sonar   -Dsonar.projectKey=calculator   -Dsonar.host.url=http://10.20.44.72:9000   -Dsonar.token=sqp_20f17190497ebb7e0c2f47ec34491b99850f4d9d
