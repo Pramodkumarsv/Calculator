@@ -1,13 +1,6 @@
 pipeline {
     agent any
-
-    environment {
-        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
-        SONAR_HOST_URL = 'http://10.20.44.72:9000'
-        SONAR_PROJECT_KEY = 'calculator_new'
-        SONAR_TOKEN = 'sqp_d1ea1591ecb41c18e42efa5bdd372c37838acb49'
-    }
-
+    
     stages {
         stage('Setup Environment') {
             steps {
@@ -34,10 +27,10 @@ pipeline {
             steps {
                 sh '''
                 mvn clean verify sonar:sonar \
-                -Dsonar.projectKey=calculator_new \
-                -Dsonar.projectName='calculator_new' \
-                -Dsonar.host.url=http://10.20.44.72:9000 \
-                -Dsonar.token=calculator_new
+                  -Dsonar.projectKey=new \
+                  -Dsonar.projectName='new' \
+                  -Dsonar.host.url=http://10.20.44.72:9000 \
+                  -Dsonar.token=sqp_0145dc8eae8330192257e87c14b9568a04efd1e8
                 '''
             }
         }
