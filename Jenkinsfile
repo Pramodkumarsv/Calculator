@@ -4,7 +4,7 @@ pipeline {
     environment {
         JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64'
         SONAR_HOST_URL = 'http://10.20.44.72:9000'
-        SONAR_PROJECT_KEY = 'Calculator'
+        SONAR_PROJECT_KEY = 'calculator_new'
         SONAR_TOKEN = 'sqp_d1ea1591ecb41c18e42efa5bdd372c37838acb49'
     }
 
