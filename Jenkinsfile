@@ -33,10 +33,11 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 sh '''
-                mvn sonar:sonar \
-                    -Dsonar.projectKey=${SONAR_PROJECT_KEY} \
-                    -Dsonar.host.url=${SONAR_HOST_URL} \
-                    -Dsonar.token=${SONAR_TOKEN}
+                mvn clean verify sonar:sonar \
+                -Dsonar.projectKey=calculator_new \
+                -Dsonar.projectName='calculator_new' \
+                -Dsonar.host.url=http://10.20.44.72:9000 \
+                -Dsonar.token=calculator_new
                 '''
             }
         }
